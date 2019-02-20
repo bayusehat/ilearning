@@ -169,11 +169,12 @@ class Course_model extends CI_Model {
         }
         else{
             if ($user_id != $id_usermaker) {
-          $data=array(
-              'visitor'           => $visitor_new,
-        );      
+                $data=array(
+                    'visitor'      => $visitor_new,
+                );      
             $this->db->where('id_title',$id_title)
-                ->update('course_title', $data);
+                    ->update('course_title', $data);
+
             $enroll=array(
               'id_title'           => $id_title,
               'id_user'            => $user_id,
@@ -191,9 +192,6 @@ class Course_model extends CI_Model {
             );
         
          $this->db->insert('notification', $insert_notif);
-
-        
-      
             }
         }
     }

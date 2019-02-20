@@ -58,6 +58,7 @@ class Home extends CI_Controller {
 		'sld_img'		=> $sld_img,
 		'testimonial'		=> $testimonial
  		];
+ 		$data['title'] = 'Home';
 		$this->load->view('templet', $data);
 	
 }

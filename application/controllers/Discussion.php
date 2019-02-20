@@ -71,7 +71,8 @@ class Discussion extends CI_Controller {
 		 		];
 
 		}
-				$this->load->view('templet', $data);
+		$data['title'] = 'Discussion';
+		$this->load->view('templet', $data);
 	}
 	public function detail_discuss()
 	{	$random_code = $this->uri->segment(2);
@@ -167,8 +168,8 @@ class Discussion extends CI_Controller {
 			// 'subscribed'			=> $subscribed,
 			// 'subs_amount'			=> $subs_amount,
 		];
-				
-				$this->load->view('detail_discuss', $data);
+		$data['title'] = 'Detail Discussion';		
+		$this->load->view('detail_discuss', $data);
 	}
 	else{
 		redirect('eror404');

@@ -79,7 +79,7 @@ class Infinitive extends CI_Controller {
 				'username_id'	=> $username_id,
 					];
 		}
-		
+		$data['title'] = 'Home';
 		$this->load->view('template', $data);
 	}
 

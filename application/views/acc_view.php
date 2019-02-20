@@ -180,9 +180,19 @@
                             <div class="panel-heading">
                                 <div class="panel-options">
                                     <ul class="nav nav-tabs">
-                                        <li class="active"><a href="#tab-1" data-toggle="tab" aria-expanded="false">List Course</a></li>
-                                        <?php if ($this->session->userdata('logged_id') == $user_info->id_user) { ?>
-                                        <li class=""><a href="#tab-2" data-toggle="tab" aria-expanded="false">All Notifications</a></li>
+                                      <?php
+                                      if($this->session->userdata('position') == 'dosen'){
+                                         echo '<li class="active"><a href="#tab-1" data-toggle="tab" aria-expanded="false">List Course</a></li>';
+                                          }
+                                       
+                                        ?>
+                                        <?php if ($this->session->userdata('logged_id') == $user_info->id_user) { 
+                                        ?> <?php if($this->session->userdata('position') != 'mahasiswa'){
+                                          echo'<li class=""><a href="#tab-2" data-toggle="tab" aria-expanded="false">All Notifications</a></li>';
+                                        }else{
+                                          echo '<li class="active"><a href="#tab-2" data-toggle="tab" aria-expanded="false">All Notifications</a></li>';
+                                        } ?>
+                                        
                                         <?php }  ?>
                                         <li class=""><a href="#tab-3" data-toggle="tab" aria-expanded="true">Enroll Course</a></li>
                                         <li class=""><a href="#tab-4" data-toggle="tab" aria-expanded="true">Subscription</a></li>
@@ -193,9 +203,11 @@
                             <div class="panel-body">
 
                             <div class="tab-content">
+                          <?php if($this->session->userdata('position') == 'dosen') {?>
                             <div class="tab-pane active" id="tab-1">
                              <table class="table table-striped">
-                                    <?php if (!empty($list_courses)) { ?>
+                                
+                                <?php if (!empty($list_courses)) { ?>
                                     <thead>
                                     <tr>
                                         <th>No</th>
@@ -241,13 +253,22 @@
                                     </tbody>
                                 </table>
                             </div>
+                          <?php } ?>
                             <?php if ($this->session->userdata('logged_id') == $user_info->id_user) { ?>
-                            <div class="tab-pane" id="tab-2">
+                              <?php if($this->session->userdata('position') != 'mahasiswa'){ ?>
+                                <div class="tab-pane" id="tab-2">
+                                <div class="feed-activity-list" id="big_notif">
+                                    
+                                </div>
+                              </div>
+                             <?php }else{ ?>
+                                <div class="tab-pane active" id="tab-2">
                                 <div class="feed-activity-list" id="big_notif">
                                     
                                 </div>
 
                             </div>
+                          <?php } ?>
                             <?php }  ?>
                             <div class="tab-pane" id="tab-3">
 

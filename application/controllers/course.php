@@ -126,7 +126,7 @@ class Course extends CI_Controller {
 				// 'sld_img'		=> $sld_img,
 					];
 		}
-		
+		$data['title'] = "Course";
 		$this->load->view('templet', $data);
 	}
 	public function comment_up(){
@@ -262,6 +262,7 @@ class Course extends CI_Controller {
 			'liked'					=> $liked, 	
 			'disliked'				=> $disliked,
 		];
+		$data['title'] = 'Lesson';
 		$this->load->view('lesson_view', $data);
 		}
 		else if($getcheckstatus == 0){

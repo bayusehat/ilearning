@@ -164,7 +164,7 @@ class Myaccount extends CI_Controller {
 			'list_subject'			=> $this->course_model->GetSubject(),
 
 		];
-
+		$data['title'] = 'Add Course';
 		$this->load->view('add_course_view',$data);
 		}
 		else{
@@ -219,7 +219,7 @@ class Myaccount extends CI_Controller {
 						'getuser_in'			=> $getuser_in,
 						'list_subject'		    => $this->course_model->GetSubject(),
 					];
-						
+						$data['title'] = 'Add Course';
 						$this->load->view('add_course_view',$data);
 
 					}
@@ -431,7 +431,7 @@ class Myaccount extends CI_Controller {
 						// 'list_subject'		=> $this->course_model->GetSubject(),
 
 					];
-						
+						$data['title'] = 'Add Course';
 						$this->load->view('add_course_view',$data);
 				}
 				else {
@@ -449,7 +449,7 @@ class Myaccount extends CI_Controller {
 						'list_subject'			=> $this->course_model->GetSubject(),
 
 					];
-						
+						$data['title'] = 'Add Course';
 						$this->load->view('add_course_view',$data);
 				}
 			
@@ -469,7 +469,7 @@ class Myaccount extends CI_Controller {
 						'list_subject'			=> $this->course_model->GetSubject(),
 
 					];
-						
+						$data['title'] = 'Add Course';
 						$this->load->view('add_course_view',$data);
 
 			}
@@ -512,7 +512,7 @@ class Myaccount extends CI_Controller {
 						'list_subject'			=> $this->course_model->GetSubject(),
 
 					];
-						
+						$data['title'] = 'Add Course';
 						$this->load->view('add_course_view',$data);
 				}
 				else {
@@ -532,7 +532,7 @@ class Myaccount extends CI_Controller {
 						// 'list_subject'		=> $this->course_model->GetSubject(),
 
 					];
-						
+						$data['title'] = 'Add Course';
 						$this->load->view('add_course_view',$data);
 				}
 			}  
@@ -553,7 +553,7 @@ class Myaccount extends CI_Controller {
 						// 'list_subject'		=> $this->course_model->GetSubject(),
 
 					];
-						
+						$data['title'] = 'Add Course';
 						$this->load->view('add_course_view',$data);
                 }
 		
@@ -673,7 +673,7 @@ class Myaccount extends CI_Controller {
 				
 					];
 		}
-		
+		$data['title'] = 'Profile';
 		$this->load->view('templet', $data);
 	}
 }
@@ -682,6 +682,7 @@ class Myaccount extends CI_Controller {
 		'main_view'		=> 'aboutus_view',
 				
 					];
+		$data['title'] = 'About Us';
 		$this->load->view('templet', $data);
 	}
 	}
