@@ -38,20 +38,20 @@
                     </div>
                 </div>  
             </form>   
-         
         </div>
 
         <br>
         <br>
 
-		<h3 style="text-align: left;text-transform: uppercase;">Discussion</h3>
+		<h3 style="text-align: left;text-transform: uppercase;margin-left: 15px;">Discussion</h3>
 		<?php
 		if (!empty($list_discuss)) {
 		 foreach ($list_discuss as $discuss) { ?>
 		<div class="col-md-4 eve-agile e1">
 			<div class="eve-sub1">
 				<!-- <a href="#" data-toggle="modal" data-target="#myModal5"><img src="images/e2.jpg" alt="image"></a> -->
-			<h4><a href="<?php echo base_url().'discuss/'.$discuss->random_code ?>" data-toggle="" data-target="" title="<?php echo $discuss->subject; ?>">
+			<h6 style="margin-bottom: 3px">Discuss Title :</h6>
+			<h4 style="margin-top: 0"><a href="<?php echo base_url().'discuss/'.$discuss->random_code ?>" data-toggle="" data-target="" title="<?php echo $discuss->subject; ?>">
 				<?php 
                         if (strlen($discuss->subject) < 24) {
                           echo $discuss->subject;
@@ -60,15 +60,32 @@
                         echo  substr($discuss->subject, 0,23).'..';
                         } ?>
 			</a></h4>
-				<h6>By an <a href="#"><?php echo $discuss->username ?></a>, <?php echo $discuss->comment_created ?>
-				<br>in <a href="#" data-toggle="modal" data-target="#lesson" class="lesson_view" id="<?php echo $discuss->random_code ?>" style="color:#d9534f;"><?php echo $discuss->title ?></a></h6>
+				<table width="100%">
+					<tr>
+						<td>By an </td>
+						<td>:</td>
+						<td><a href="#"><?php echo $discuss->username ?></a></td>
+					</tr>
+					<tr>
+						<td>Created in</td>
+						<td>:</td>
+						<td><?php echo $discuss->comment_created ?></td>
+					</tr>
+					<tr>
+						<td>Course</td>
+						<td>:</td>
+						<td><a href="#" data-toggle="modal" data-target="#lesson" class="lesson_view" id="<?php echo $discuss->random_code ?>" style="color:#d9534f;"><?php echo $discuss->title ?></a></td>
+					</tr>
+				</table>
+				<!-- <h6>By an 
+				<br> <a href="#" data-toggle="modal" data-target="#lesson" class="lesson_view" id="<?php echo $discuss->random_code ?>" style="color:#d9534f;"><?php echo $discuss->title ?></a></h6>
 				<p class="breaks"><?php 
                         if (strlen($discuss->text_comment) < 37) {
                           echo $discuss->text_comment;
                         }
                         else{
                         echo  substr($discuss->text_comment, 0,38).'..';
-                        } ?></p>
+                        } ?></p> -->
 			</div>
 			<div class="eve-sub2">
 				<div class="eve-w3lleft">

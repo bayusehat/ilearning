@@ -10,7 +10,7 @@ class Discussion extends CI_Controller {
 		$this->load->model('home_model');	
 	}
 	public function index()
-	{
+	{ 
 		// $sld_img = $this->home_model->GetData(['type'=> 'slide image'],'config')->row('img');
 		// $slider = $this->home_model->GetData(['type'=>'slide'],'config')->result();
 		$user_id = $this->session->userdata('logged_id');

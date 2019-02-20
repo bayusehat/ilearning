@@ -2,16 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <!--  This file has been downloaded from bootdey.com    @bootdey on twitter -->
-    <!--  All snippets are MIT license http://bootdey.com/license -->
-    <!-- 
-    	The codes are free, but we require linking to our web site.
-    	Why to Link?
-    	A true story: one girl didn't set a link and had no decent date for two years, and another guy set a link and got a top ranking in Google! 
-    	Where to Put the Link?
-    	home, about, credits... or in a good page that you want
-    	THANK YOU MY FRIEND!
-    -->
     <title>Indo-Learning</title>
     <link rel="shortcut icon" type="image/x-icon" href="<?php echo base_url();?>assets/images/icon logo.png" />
     <!-- css files -->

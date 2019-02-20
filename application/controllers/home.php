@@ -201,7 +201,7 @@ class Home extends CI_Controller {
 
 				
 				$output .= '
-				 <li class="notification" '.$type.'>
+				 <li class="notification" '.$type.' >
                     <div class="media">
                       <div class="media-left">
                         <div class="media-object">
@@ -218,7 +218,8 @@ class Home extends CI_Controller {
                         </div>
                       </div>
                     </div>
-                </li>';	
+                </li>
+                ';	
             	
             	}
 				}
