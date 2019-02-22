@@ -563,10 +563,6 @@
   <?php $this->load->view($main_view); ?>
 
 <hr/>
-<!-- footer -->
-<!--  <div style="background-color: #212121; height: 50px;"> -->
-    
-  <!-- <div class="container"> -->
     <p style="text-align: center;">© 2019 I-Learning. All rights reserved <!-- | <a href="<?php echo base_url(); ?>myaccount/about_us">About Us</a> --></p>
 <?php if ($this->session->flashdata('notif_success')): ?>
                             <script>
