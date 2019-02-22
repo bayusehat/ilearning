@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>T - Learning | <?php echo $title;?></title>
-    <link rel="shortcut icon" type="image/x-icon" href="<?php echo base_url();?>assets/images/icon logo.png" />
+    <title>I - Learning | <?php echo $title;?></title>
+    <link rel="shortcut icon" type="image/x-icon" href="<?php echo base_url();?>assets/images/logoicon.png" />
     <!-- css files -->
     <link href="<?php echo base_url(); ?>assets/css/style.css" rel="stylesheet" type="text/css" media="all">
     <link href="<?php echo base_url(); ?>assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
@@ -392,7 +392,7 @@
   <!-- //Modal4-->
 
           <div class="">
-            <a class="navbar-brand" href="<?php echo base_url();?>home"><img class="icon_cuy" src="<?php echo base_url();?>assets/images/icon logo.png" alt="icon" name="icon" style="width: 45px;height: auto;"></a>
+            <a class="navbar-brand" href="<?php echo base_url();?>home"><img class="icon_cuy" src="<?php echo base_url();?>assets/images/logohead.png" alt="icon" name="icon" style="width:150px;height: auto;"></a>
           </div>
 
 
@@ -567,7 +567,7 @@
 <!--  <div style="background-color: #212121; height: 50px;"> -->
     
   <!-- <div class="container"> -->
-    <p style="text-align: center;">© 2017 Indo-Learning. All rights reserved | <a href="<?php echo base_url(); ?>myaccount/about_us">About Us</a></p>
+    <p style="text-align: center;">© 2019 I-Learning. All rights reserved <!-- | <a href="<?php echo base_url(); ?>myaccount/about_us">About Us</a> --></p>
 <?php if ($this->session->flashdata('notif_success')): ?>
                             <script>
                                 swal({
